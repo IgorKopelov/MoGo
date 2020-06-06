@@ -9,6 +9,7 @@
     <script src="main.js"></script>
     <title>Mogo</title>
 </head>
+
 <body>
 
 <header class="header">
@@ -623,7 +624,8 @@
             <div class="footer_col">
                 <div class="footer_logo">MoGo</div>
                 <div class="footer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Amet nisi tempore exercitationem accusamus dolore modi iusto officia quia eaque, soluta, fugit minus quasi dolorem!</div>
+                                        Amet nisi tempore exercitationem accusamus dolore modi iusto officia quia eaque, soluta, fugit minus quasi dolorem!
+                </div>
                 <div class="footer_social">
                     <div class="footer_social-header">
                         <b>15K</b> followers
@@ -640,35 +642,18 @@
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
-                </div>
+                </div> <!--footer_social-->
+
+                <form class="subscribe" action="/" method="POST">
+                    <input class="subscribe_input" type="email" placeholder="Your Email..." name="name">
+                    <button class="subscribe_btn" type="submit">Subscribe</button>
+                
+                </form>
+
             </div>
         </div>
     </div> <!-- contaniar -->
 </footer> 
-
-
-<div class="calculator">
-    <div class="operacion_blok">
-        <button id="buttonPlus">+</button>
-        <button id="buttonMinus">-</button>
-        <button id="buttonMultiplay">*</button>
-        <button id="buttonDevide">/</button>
-    </div>
-    <div class="separator">
-        <hr>
-    </div>
-    <div class="inputs-blok">
-        <div class="input-blok">
-            <label for="">Num1</label>
-            <input id="number1" type="number">
-        </div>
-        <div class="input-blok">
-            <label for="">Num2</label>
-            <input id="number2" type="number">
-        </div>
-    </div>
-</div>
-
 
 <script src="https://kit.fontawesome.com/b439a56a2d.js" crossorigin="anonymous"></script>
 </body>
