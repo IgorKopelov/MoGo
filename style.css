@@ -29,7 +29,8 @@ hr{
 /* Container=========== */
 .contanier{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -221,18 +222,18 @@ hr{
       
 }
 
-.slider_num{
+.slider_num {
     font-size: 24px;
     font-weight: 700;
 }
 
 /* Section */
  
-section{
+.section {
     padding: 80px 0;
 }
 
-.section--devices{
+.section--devices {
     margin-bottom: 40px;
     padding-bottom: 0;
     background: url("img/Divase/Wood.jpg") center no-repeat;
@@ -240,11 +241,11 @@ section{
     background-size: cover;
 }
 
-.section--grey{
+.section--grey {
     background-color:#f8f8f8;
 }
 
-.section--clients{
+.section--clients {
     background:#f5f5f5 url("img/Clients/mountain.jpg")
     center no-repeat;
     background-size: cover;
@@ -300,25 +301,25 @@ section{
 /* About========= */
 
 .cord{
-    margin-top: 80px;
+    margin: 80px -15px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .cord_item {
-    width: 380px;
-    /* position: relative;
-    background: #95e1d3; */
+    width: 33.33333%;
+    padding: 0 15px;
 }
 .cord_inner{
     position: relative;
     background: #95e1d3;
 }
 
-.cord_item:hover .cord_imge{
+.cord_item:hover .cord_img{
     transform: translate3d(-10px, -10px, 0);
 }
 
-.cord_item:hover .cord_imge img{
+.cord_item:hover .cord_img img{
     opacity: .1;
     translate: transform 2s lianer;
 }
@@ -327,11 +328,13 @@ section{
     opacity: 1;
 }
 
-.cord_imge{
+.cord_img{
     background: linear-gradient(to bottom,#f38181,#fce38a );
 }
-.cord_imge img{
+.cord_img img{
     display: block;
+    min-width: 100%;
+    height: auto;
     transition: opacity .1s linear;
 }
 
@@ -380,6 +383,7 @@ section{
 
 .stat{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat_item{
@@ -415,14 +419,18 @@ section{
 ========================= */
 .services{
     display: flex;
-    /* justify-content: space-around; */
+    flex-wrap: wrap;
 }
 
 .services_item{
-    flex: 1 1 0;
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
+}
+
+.services_item--border {
+    border-bottom: 1px solid #e5e5e5;
 }
 .services_icon{
     position: absolute;
@@ -455,26 +463,34 @@ section{
     
 }
 
-.divices_item{
+.divices_item {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .divices_item--iphon{
     position: absolute;
     bottom: -80px;
-    right: 30%;
+    right: 0;
     z-index: 1;
     }
     /* We Do */
 
 .wedo{
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 .wedo_item{
     width: 50%;
-    /* position: relative; */
+    padding: 0 15px;
+}
+
+.wedo_img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Accordion */
@@ -1074,7 +1090,6 @@ section{
 .subscribe_btn:hover{
     background-color: #45756c;
 }
-
 /* Copyrit */
 .copyrit{
     padding: 20px 0;
@@ -1088,4 +1103,166 @@ section{
 
 .copyrit span {
     color:#e07f7f;
+}
+
+@media(max-width:1230px) {
+
+    /* Intro */
+    .intro_suptitle {
+        font-size: 52px;
+    }
+
+    .intro_title {
+        font-size: 120px;
+    }
+}
+
+@media(max-width:990px) {
+
+    /* Intro */
+    .intro_suptitle {
+        font-size: 32px;
+    }
+
+    .intro_title {
+        font-size: 80px;
+    }
+    /* Stat */
+    .stat {
+        justify-content:center;
+    }
+    .stat_item {
+        width: 100%;
+        border-bottom: 1px solid #b5eae0;
+        flex: none;
+        width: 33.33333%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 0;
+    }
+    .stat_item:last-child {
+        border-right: 0;
+    }
+
+    /* Services */
+    .services_item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+
+    .services_item--border {
+        border-bottom: 0;
+    }
+}
+
+@media(max-width:770px) {
+    /* Nav */
+    .nav {
+        display: none;
+    }
+
+    .slider_text {
+        display: none;
+    }
+
+    .slider__item.active:before {
+        width: 50%;
+    }
+    /* Section */
+    .section {
+        padding: 40px 0;
+    }
+    .section--devices {
+        margin-bottom: 0;
+    }
+    /* Cards */
+    .cord {
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .cord_item {
+
+        width: 100%;
+        min-width: 410px;
+        margin-bottom: 30px;
+    }
+    .cord_item:last-child {
+        margin-bottom: 0;
+    }
+    .services {
+        justify-content: center;
+    }
+
+    .services_item {
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services_icon {
+        left: 0;
+    }
+
+    /* Divases */
+
+    /* We Do */
+    .wedo_img {
+        display: none;
+    }
+    .wedo_item {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:575px) {
+
+    /* Intro */
+    .intro_suptitle {
+        font-size: 22px;
+    }
+
+    .intro_title {
+        font-size: 40px;
+    }
+
+    /* Section */
+    .section_heder {
+        margin-bottom: 50px;
+    }
+    
+    .section_suptitle {
+        font-size: 20px;
+    }
+
+    .section_title {
+        font-size: 24px;
+    }
+
+    .section_title::after {
+        margin: 20px auto;
+    }
+
+/* Stat */
+
+    .stat_item {
+        width: 100%;
+        border-bottom: 1px solid #b5eae0;
+    }
+
+    .stat_num {
+        font-size: 52px;
+    }
+     /* Divases */
+
+     .divices {
+         max-width: 320px;
+     }
+
+     .divices_item--iphon {
+         width: 180px;
+         bottom: -50px;
+         right: -80px;
+     }
 }
