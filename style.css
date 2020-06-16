@@ -27,7 +27,7 @@ hr{
 }
 
 /* Container=========== */
-.container{
+.contanier{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -905,7 +905,21 @@ section{
 }
 
 .footer_inner{
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 65px;
+}
+
+.footer_col--first{
+    width: 40%;
+}
+
+.footer_col--second{
+    width: 29%;
+}
+
+.footer_col--third{
+    width: 22%;
 }
 
 .footer_logo{
@@ -952,9 +966,65 @@ section{
     color: #95e1d3;
     font-size: 18px;
 }
+.footer_title{
+    margin: 30px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:black;
+}
 
+/* Blogs */
+.blogs_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
+.blogs_img{
+    width: 120px;
+    height: 80px;
+}
 
+.blogs_content{
+    padding-left: 20px;
+}
+
+.blogs_title{
+    display: block;
+    margin-bottom: 5px;
+
+    color:#333;
+    font-size: 12px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.blogs_title:hover{
+    text-decoration: underline;
+}
+
+.blogs_date{
+    font-size: 12px;
+    color:#999;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Instagram */
+.instagram{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.instagram_item{
+    width: 32.3333%;
+    border-bottom:1px solid #fff;
+}
+
+.instagram_item img{
+    display: block;
+}
 /* Subscribe */
 
 .subscribe{
@@ -964,11 +1034,13 @@ section{
 }
 
 .subscribe_input{
+    width: 60%;
     height: 40px;
     padding: 12px;
 
     background:#fff;
     border:1px solid #e7e7e7;
+    border-right:0;
 
     font-family: 'Montserrat' 'sans-serif';
     font-size: 15px;
@@ -977,7 +1049,12 @@ section{
     font-style: italic;
     font-weight: 300;
 }
+
+.subscribe_input::placeholder{
+    color: #ccc;
+}
 .subscribe_btn{
+    width: 40%;
     height: 40px;
     padding: 12px 30px;
 
@@ -991,4 +1068,24 @@ section{
     line-height: 1.1;
     color: #fff;
     text-transform: uppercase;
+
+    transition: background .2s linear;
+}
+.subscribe_btn:hover{
+    background-color: #45756c;
+}
+
+/* Copyrit */
+.copyrit{
+    padding: 20px 0;
+
+    border-top: 1px solid #e5e5e5;
+
+    color:#333333;
+    text-align: center;
+    font-size: 14px;
+}
+
+.copyrit span {
+    color:#e07f7f;
 }
